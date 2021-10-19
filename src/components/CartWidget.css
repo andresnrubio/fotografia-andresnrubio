@@ -1,0 +1,13 @@
+.cart {
+    display: flex;
+}
+
+
+.cartIcon{
+    padding: 10px;
+    height: 100%;
+    font-size: 20px;
+}
+.cartIcon:hover{
+    height: 100%;
+}
