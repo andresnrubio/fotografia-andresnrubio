@@ -3,6 +3,7 @@ import './App.css';
 import {NavBar} from "./components/NavBar.jsx";
 import {ItemListContainer} from "./components/ItemListContiner.jsx"
 
+
 function App() {
   return (
     <div className="App">
@@ -11,14 +12,6 @@ function App() {
         </header>
 
       <ItemListContainer greeting="Texto provisorio catalogo"/>
-
-
-
-{/* <section>
-<button> + </button>
-
-<button> - </button>
-</section> */}
 
 
          { <main className="App-main">
