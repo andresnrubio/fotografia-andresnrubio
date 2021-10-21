@@ -2,21 +2,20 @@ import { useState } from "react";
 import "./ItemCount.css";
 import React from "react";
 
-const QItems = ({ QItem }) => {
-  return <p>{QItem}</p>;
-};
-
-export const ItemCount = () => {
-  const [QItem, setQItem] = useState(1);
+export const ItemCount = ({ stock, initial }) => {
+  const [QItem, setQItem] = useState(initial);
 
   const DecreaseOne = () => {
-    setQItem(QItem - 1);
-    console.log ("Hiciste click -");
+    if (QItem > initial) setQItem(QItem - 1);
+    console.log("Hiciste click -");
   };
 
   const AddOne = () => {
-    setQItem(QItem + 1);
-    console.log ("Hiciste click +");
+    if (QItem < stock) setQItem(QItem + 1);
+    console.log("Hiciste click +");
+    console.log({ QItem });
+    console.log(initial);
+    console.log(stock);
   };
 
   return (
@@ -24,12 +23,10 @@ export const ItemCount = () => {
       <p onClick={DecreaseOne} className="material-icons buttonCard">
         remove_circle_outline
       </p>
-
-      <QItems QItem={QItem}/>
-
+      <p className="qItem">{QItem}</p>
       <p onClick={AddOne} className="material-icons buttonCard">
         add_circle_outline
       </p>
     </div>
   );
-}
+};

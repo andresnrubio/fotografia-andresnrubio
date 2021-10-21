@@ -2,12 +2,12 @@
     display: flex;
 }
 
-
-.cartIcon{
+.cartIcon {
     padding: 10px;
     height: 100%;
     font-size: 20px;
 }
-.cartIcon:hover{
+
+.cartIcon:hover {
     height: 100%;
 }

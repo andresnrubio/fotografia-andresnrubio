@@ -1,23 +1,30 @@
-
-
 .countProduct {
-margin:0;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .addProduct {
-margin-top: 1rem;
-width: 10rem;
-max-width: 90%;
-align-self: center;
+    margin-top: 1rem;
+    width: 15rem;
+    height: 2rem;
+    max-width: 90%;
+    align-self: center;
 
 }
-.buttonCard{
-    background-color:darkgrey;
+
+.buttonCard {
+    color: #303030;
+    background-color: darkgrey;
 }
 
-.buttonCard:hover{
+.buttonCard:hover {
+    color: #fff;
     cursor: default;
+}
+
+.qItem {
+    font-family: "Open Sans", sans-serif, "Montserrat", sans-serif;
+    font-size: 1rem;
 }

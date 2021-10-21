@@ -1,10 +1,16 @@
 .cardProduct {
-    margin:0;
+    color: #303030;
+    margin: 1rem;
     display: flex;
     justify-content: space-evenly;
-    width: 15rem;
-    height: 20rem;
+    width: 20rem;
+    height: 22rem;
     flex-direction: column;
     background-color: darkgrey;
     border: solid #303030 2px;
-    }
+}
+
+.cardProduct img {
+    width: 100%;
+    padding: 3px;
+}
