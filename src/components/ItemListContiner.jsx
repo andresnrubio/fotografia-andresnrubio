@@ -1,14 +1,11 @@
-import './ItemListContainer.css'
-import {ItemCard} from "./ItemCard.jsx";
+import "./ItemListContainer.css";
+import { ItemCard } from "./ItemCard.jsx";
 
-
-
-export const ItemListContainer = (props) =>
-{
-return (
+export const ItemListContainer = (props) => {
+  return (
     <div>
-    <p className="itemList">{props.greeting}</p>
-    <ItemCard stock="5" initial="1"/>
+      <p className="itemList">{props.greeting}</p>
+      <ItemCard />
     </div>
-)
-}
+  );
+};
