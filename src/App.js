@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+/* import logo from "./logo.svg"; */
 import "./App.css";
 import { NavBar } from "./components/NavBar.jsx";
 import { ItemListContainer } from "./components/ItemListContiner.jsx";
@@ -9,12 +9,12 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <ItemListContainer greeting="Texto provisorio catalogo" />
-      {
+      <ItemListContainer />
+      {/* {
         <main className="App-main">
           <img src={logo} className="App-logo" alt="logo" />
         </main>
-      }{" "}
+      }{" "} */}
     </div>
   );
 }

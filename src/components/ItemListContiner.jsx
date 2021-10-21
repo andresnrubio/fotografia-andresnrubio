@@ -1,11 +1,10 @@
 import "./ItemListContainer.css";
-import { ItemCard } from "./ItemCard.jsx";
+import { ItemList } from "./ItemList.jsx";
 
 export const ItemListContainer = (props) => {
   return (
     <div>
-      <p className="itemList">{props.greeting}</p>
-      <ItemCard />
+      <ItemList />
     </div>
   );
 };
