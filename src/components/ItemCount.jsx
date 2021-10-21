@@ -7,15 +7,10 @@ export const ItemCount = ({ stock, initial }) => {
 
   const DecreaseOne = () => {
     if (QItem > initial) setQItem(QItem - 1);
-    console.log("Hiciste click -");
   };
 
   const AddOne = () => {
     if (QItem < stock) setQItem(QItem + 1);
-    console.log("Hiciste click +");
-    console.log({ QItem });
-    console.log(initial);
-    console.log(stock);
   };
 
   return (
