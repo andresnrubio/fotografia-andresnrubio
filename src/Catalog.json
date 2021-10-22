@@ -1,25 +1,26 @@
-{
-    "catalog": [
-        {
-            "initial": 1,
-            "stock": 5,
-            "title": "Cañon Colorado",
-            "price": 1400,
-            "img": "./img/rojo.jpeg"
-        },
-        {
-            "initial": 1,
-            "stock": 5,
-            "title": "Cañon Colorado",
-            "price": 1400,
-            "img": "./img/rojo.jpeg"
-        },
-        {
-            "initial": 1,
-            "stock": 5,
-            "title": "Cañon Colorado",
-            "price": 1400,
-            "img": "./img/rojo.jpeg"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "initial": 1,
+        "stock": 5,
+        "title": "Cañon Colorado",
+        "price": 1400,
+        "img": "./img/rojo.jpeg"
+    },
+    {
+        "id": 2,
+        "initial": 1,
+        "stock": 5,
+        "title": "Cañon Colorado",
+        "price": 1400,
+        "img": "./img/rojo.jpeg"
+    },
+    {
+        "id": 3,
+        "initial": 1,
+        "stock": 5,
+        "title": "Cañon Colorado",
+        "price": 1400,
+        "img": "./img/rojo.jpeg"
+    }
+]

@@ -4,33 +4,33 @@ import { ItemList } from "./ItemList.jsx";
 import { useEffect, useState } from "react";
 
 export const ItemListContainer = () => {
-  const [catalog, setCatalog] = useState([]);
-
-  console.log(catalog);
+  const [catalogo, setCatalog] = useState([]);
 
   const readCatalog = (data) =>
     new Promise((resolve, reject) => {
       setTimeout(() => {
         if (data) {
           resolve(data);
+          console.log("entre!");
         } else {
           reject("No se encuentra el catálogo");
         }
-      }, 2000);
+      }, 3000);
     });
-
-  console.log(catalog);
 
   useEffect(() => {
     readCatalog(catalog)
-      .then((result) => setCatalog(result))
+      .then((result) => {
+        setCatalog(result);
+      })
       .catch((err) => console.log(err));
   });
 
   return (
     <div>
-      {catalog.map((item) => (
+      {catalogo.map((item) => (
         <ItemList
+          key={item.id}
           initial={item.initial}
           stock={item.stock}
           title={item.title}
