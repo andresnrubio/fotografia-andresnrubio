@@ -22,6 +22,8 @@ export const ItemCount = ({ stock, initial }) => {
       <p onClick={AddOne} className="material-icons buttonCard">
         add_circle_outline
       </p>
+
+      <button className="addProduct">Agregar</button>
     </div>
   );
 };

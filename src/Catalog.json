@@ -1,0 +1,25 @@
+{
+    "catalog": [
+        {
+            "initial": 1,
+            "stock": 5,
+            "title": "Cañon Colorado",
+            "price": 1400,
+            "img": "./img/rojo.jpeg"
+        },
+        {
+            "initial": 1,
+            "stock": 5,
+            "title": "Cañon Colorado",
+            "price": 1400,
+            "img": "./img/rojo.jpeg"
+        },
+        {
+            "initial": 1,
+            "stock": 5,
+            "title": "Cañon Colorado",
+            "price": 1400,
+            "img": "./img/rojo.jpeg"
+        }
+    ]
+}

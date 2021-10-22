@@ -1,15 +1,15 @@
 import "./ItemList.css";
 import { Item } from "./Item.jsx";
 
-export const ItemList = () => {
+export const ItemList = (props) => {
   return (
     <div>
       <Item
-        initial={1}
-        stock={5}
-        title={"Cañon Colorado"}
-        price={1400}
-        img={"./img/rojo.jpeg"}
+        initial={props.initial}
+        stock={props.stock}
+        title={props.title}
+        price={props.price}
+        img={props.img}
       />
     </div>
   );
