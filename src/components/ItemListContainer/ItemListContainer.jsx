@@ -1,6 +1,6 @@
 import "./ItemListContainer.css";
-import catalog from "../Catalog.json";
-import { ItemList } from "./ItemList.jsx";
+import catalog from "../../Catalog.json";
+import { ItemList } from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
 
 export const ItemListContainer = () => {
@@ -11,7 +11,6 @@ export const ItemListContainer = () => {
       setTimeout(() => {
         if (data) {
           resolve(data);
-          console.log("entre!");
         } else {
           reject("No se encuentra el catálogo");
         }
@@ -27,17 +26,8 @@ export const ItemListContainer = () => {
   });
 
   return (
-    <div>
-      {catalogo.map((item) => (
-        <ItemList
-          key={item.id}
-          initial={item.initial}
-          stock={item.stock}
-          title={item.title}
-          price={item.price}
-          img={item.img}
-        />
-      ))}
+    <div className="itemListContainer">
+      <ItemList catalogo={catalogo} />
     </div>
   );
 };

@@ -5,7 +5,7 @@ export const Item = (props) => {
     <div className="cardProduct">
       <h5>{props.title}</h5>
       <img src={props.img} alt="Foto Prueba" />
-      <button className="detail">Descripcion</button>
+      <button className="waves-effect waves-light btn-smal">Descripcion</button>
     </div>
   );
 };

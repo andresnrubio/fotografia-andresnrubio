@@ -1,7 +1,9 @@
 /* import logo from "./logo.svg"; */
+
+import "materialize-css/dist/css/materialize.min.css";
 import "./App.css";
-import { NavBar } from "./components/NavBar.jsx";
-import { ItemListContainer } from "./components/ItemListContainer.jsx";
+import { NavBar } from "./components/NavBar/NavBar";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </main>
       }{" "} */}
+      <footer className="App-footer">Hola soy el footer</footer>
     </div>
   );
 }

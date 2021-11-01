@@ -1,5 +1,4 @@
 import "./CartWidget.css";
-import "materialize-css/dist/css/materialize.min.css";
 
 export const CartWidget = () => {
   return (
