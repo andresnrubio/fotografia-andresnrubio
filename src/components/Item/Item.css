@@ -11,6 +11,21 @@
 }
 
 .cardProduct img {
-    width: 100%;
     padding: 3px;
+}
+
+.buttonSeeMore {
+    width: 75%;
+    align-self: center;
+
+}
+
+#modal1 {
+    margin-top: 50%;
+    min-width: 800px;
+    min-height: 444px;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -200px;
+
 }
