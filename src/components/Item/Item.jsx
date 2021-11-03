@@ -21,13 +21,8 @@ export const Item = (props) => {
           Ver mas
         </button>
         <div id="modal1" class="modal">
-          <div class="modal-content ">
+          <div className="modal-content ">
             <ItemDetailContainer id={"A" + props.id} />
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
-              Cerrar
-            </a>
           </div>
         </div>
       </div>
