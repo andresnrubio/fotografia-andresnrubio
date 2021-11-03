@@ -5,13 +5,12 @@
     justify-content: space-around;
 }
 
-.addProduct {
+.addProductButton {
     margin-top: 1rem;
     width: 15rem;
     height: 2rem;
     max-width: 90%;
-    align-self: center;
-
+    justify-content: center;
 }
 
 .buttonCard {

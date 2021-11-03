@@ -12,6 +12,7 @@ export const ItemList = (props) => {
           {" "}
           <Item
             key={data.id}
+            id={data.id}
             initial={data.initial}
             stock={data.stock}
             title={data.title}
