@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ItemCount.css";
 import React from "react";
 
@@ -23,6 +23,7 @@ export const ItemCount = ({ stock, initial }) => {
         <p onClick={AddOne} className="material-icons buttonCard">
           add_circle_outline
         </p>
+        <div></div>
       </div>
 
       <button className="addProductButton">Agregar</button>
