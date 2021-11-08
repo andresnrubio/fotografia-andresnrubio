@@ -18,7 +18,7 @@ function App() {
           <Route path="/category/:categoryId">
             <ItemListContainer />
           </Route>
-          <Route path="/item/:id">
+          <Route path="/item/:Id">
             <ItemDetailContainer />
           </Route>
         </Switch>

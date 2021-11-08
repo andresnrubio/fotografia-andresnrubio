@@ -26,12 +26,6 @@ export const ItemDetailModal = (props) => {
         <h2>{itemDetail.title}</h2>
         <p>{itemDetail.description}</p>
 
-        {/* <ul className="optionsList">
-          Soy un menu de Opciones
-          <li>Opcion3</li>
-          <li>Opcion3</li>
-          <li>Opcion3</li>
-        </ul> */}
         <div className="ItemAdd">
           <ItemCount initial={itemDetail.initial} stock={itemDetail.stock} />
         </div>
