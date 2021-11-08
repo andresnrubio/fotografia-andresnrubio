@@ -23,8 +23,9 @@ export const ItemListContainer = () => {
         setCatalog(result);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
 
+  console.log(catalogo);
   return (
     <div className="itemListContainer">
       <ItemList catalogo={catalogo} />

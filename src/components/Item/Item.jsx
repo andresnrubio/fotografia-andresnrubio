@@ -1,9 +1,12 @@
 import "./Item.css";
 import M from "materialize-css/dist/js/materialize.js";
-import { ItemDetailContainer } from "../ItemDetailContainer/ItemDetailContainer";
+import { ItemDetailModalContainer } from "../ItemDetailModalContainer/ItemDetailModalContainer";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export const Item = (props) => {
+  console.log(props);
+
   useEffect(() => {
     M.AutoInit();
   });
@@ -12,17 +15,21 @@ export const Item = (props) => {
     <>
       <div className="cardProduct">
         <h5>{props.title}</h5>
-        <img src={props.img} alt="Foto Prueba" />
+        <img src={props.img1} alt="Foto" />
+
+        <NavLink to="/item:id">
+          <button className="btn  buttonSeeMore">Ver mas</button>
+        </NavLink>
 
         <button
           data-target="modal1"
           className="btn modal-trigger buttonSeeMore"
         >
-          Ver mas
+          Comprar
         </button>
-        <div id="modal1" class="modal">
+        <div id="modal1" className="modal">
           <div className="modal-content ">
-            <ItemDetailContainer id={"A" + props.id} />
+            <ItemDetailModalContainer />
           </div>
         </div>
       </div>

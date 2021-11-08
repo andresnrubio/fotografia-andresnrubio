@@ -3,24 +3,79 @@
         "id": 1,
         "initial": 1,
         "stock": 5,
-        "title": "Cañon Colorado",
+        "title": "Casa de Gobierno",
+        "city": "VALENCIA",
+        "country": "ESPAÑA",
+        "continent": "Europa",
         "price": 1400,
-        "img": "./img/rojo.jpeg"
+        "img1": "./img/catalogo/VALENCIA_1680.JPG",
+        "img2": "./img/catalogo/VALENCIA_1680.JPG",
+        "img3": "./img/catalogo/VALENCIA_1680.JPG"
     },
     {
         "id": 2,
         "initial": 1,
         "stock": 5,
-        "title": "Cañon Colorado",
+        "title": "Torre Eiffel",
+        "city": "Paris",
+        "country": "Francia",
+        "continent": "Europa",
+        "description": "Foto de Torre Eiffel",
         "price": 1400,
-        "img": "./img/rojo.jpeg"
+        "img1": "./img/catalogo/PARIS_2374.jpg",
+        "img2": "./img/catalogo/PARIS_2374.jpg",
+        "img3": "./img/catalogo/PARIS_2374.jpg"
     },
     {
         "id": 3,
         "initial": 1,
         "stock": 5,
-        "title": "Cañon Colorado",
+        "title": "Rio Sena",
+        "city": "Paris",
+        "country": "Francia",
+        "continent": "Europa",
         "price": 1400,
-        "img": "./img/rojo.jpeg"
+        "img1": "./img/catalogo/PARIS_2269.jpg",
+        "img2": "./img/catalogo/PARIS_2269.jpg",
+        "img3": "./img/catalogo/PARIS_2269.jpg"
+    },
+    {
+        "id": 4,
+        "initial": 1,
+        "stock": 5,
+        "title": "Southwark Bridge",
+        "city": "LONDRES",
+        "country": "REINO UNIDO",
+        "continent": "Europa",
+        "price": 1400,
+        "img1": "./img/catalogo/LONDRES_2627.jpg",
+        "img2": "./img/catalogo/LONDRES_2627.jpg",
+        "img3": "./img/catalogo/LONDRES_2627.jpg"
+    },
+    {
+        "id": 5,
+        "initial": 1,
+        "stock": 5,
+        "title": "PUENTE DE LONDRES",
+        "city": "LONDRES",
+        "country": "REINO UNIDO",
+        "continent": "Europa",
+        "price": 1400,
+        "img1": "./img/catalogo/LONDRES_2603.jpg",
+        "img2": "./img/catalogo/LONDRES_2603.jpg",
+        "img3": "./img/catalogo/LONDRES_2603.jpg"
+    },
+    {
+        "id": 6,
+        "initial": 1,
+        "stock": 5,
+        "title": "MUELLE DE LIVERPOOL",
+        "city": "LIVERPOOL",
+        "country": "REINO UNIDO",
+        "continent": "Europa",
+        "price": 1400,
+        "img1": "./img/catalogo/LIVERPOOL_2803.jpg",
+        "img2": "./img/catalogo/LIVERPOOL_2803.jpg",
+        "img3": "./img/catalogo/LIVERPOOL_2803.jpg"
     }
 ]
