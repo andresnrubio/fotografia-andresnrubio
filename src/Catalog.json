@@ -8,9 +8,9 @@
         "country": "ESPAÑA",
         "continent": "Europa",
         "price": 1400,
-        "img1": "./img/catalogo/VALENCIA_1680.JPG",
-        "img2": "./img/catalogo/VALENCIA_1680.JPG",
-        "img3": "./img/catalogo/VALENCIA_1680.JPG"
+        "img1": "../img/catalogo/VALENCIA_1680.JPG",
+        "img2": "../img/catalogo/VALENCIA_1680.JPG",
+        "img3": "../img/catalogo/VALENCIA_1680.JPG"
     },
     {
         "id": 2,
@@ -22,9 +22,9 @@
         "continent": "Europa",
         "description": "Foto de Torre Eiffel",
         "price": 1400,
-        "img1": "./img/catalogo/PARIS_2374.jpg",
-        "img2": "./img/catalogo/PARIS_2374.jpg",
-        "img3": "./img/catalogo/PARIS_2374.jpg"
+        "img1": "../img/catalogo/PARIS_2374.jpg",
+        "img2": "../img/catalogo/PARIS_2374.jpg",
+        "img3": "../img/catalogo/PARIS_2374.jpg"
     },
     {
         "id": 3,
@@ -35,9 +35,9 @@
         "country": "Francia",
         "continent": "Europa",
         "price": 1400,
-        "img1": "./img/catalogo/PARIS_2269.jpg",
-        "img2": "./img/catalogo/PARIS_2269.jpg",
-        "img3": "./img/catalogo/PARIS_2269.jpg"
+        "img1": "../img/catalogo/PARIS_2269.jpg",
+        "img2": "../img/catalogo/PARIS_2269.jpg",
+        "img3": "../img/catalogo/PARIS_2269.jpg"
     },
     {
         "id": 4,
@@ -48,9 +48,9 @@
         "country": "REINO UNIDO",
         "continent": "Europa",
         "price": 1400,
-        "img1": "./img/catalogo/LONDRES_2627.jpg",
-        "img2": "./img/catalogo/LONDRES_2627.jpg",
-        "img3": "./img/catalogo/LONDRES_2627.jpg"
+        "img1": "../img/catalogo/LONDRES_2627.jpg",
+        "img2": "../img/catalogo/LONDRES_2627.jpg",
+        "img3": "../img/catalogo/LONDRES_2627.jpg"
     },
     {
         "id": 5,
@@ -61,9 +61,9 @@
         "country": "REINO UNIDO",
         "continent": "Europa",
         "price": 1400,
-        "img1": "./img/catalogo/LONDRES_2603.jpg",
-        "img2": "./img/catalogo/LONDRES_2603.jpg",
-        "img3": "./img/catalogo/LONDRES_2603.jpg"
+        "img1": "../img/catalogo/LONDRES_2603.jpg",
+        "img2": "../img/catalogo/LONDRES_2603.jpg",
+        "img3": "../img/catalogo/LONDRES_2603.jpg"
     },
     {
         "id": 6,
@@ -74,8 +74,8 @@
         "country": "REINO UNIDO",
         "continent": "Europa",
         "price": 1400,
-        "img1": "./img/catalogo/LIVERPOOL_2803.jpg",
-        "img2": "./img/catalogo/LIVERPOOL_2803.jpg",
-        "img3": "./img/catalogo/LIVERPOOL_2803.jpg"
+        "img1": "../img/catalogo/LIVERPOOL_2803.jpg",
+        "img2": "../img/catalogo/LIVERPOOL_2803.jpg",
+        "img3": "../img/catalogo/LIVERPOOL_2803.jpg"
     }
 ]

@@ -7,11 +7,7 @@ import { useParams } from "react-router";
 export const ItemDetailContainer = () => {
   const { Id } = useParams();
 
-  const toFind = Id;
-
-  console.log("el ID es " + toFind);
-
-  const [Detail, setItemDetail] = useState([]);
+  const [itemDetail, setItemDetail] = useState({});
 
   const getItemDetail = (data) =>
     new Promise((resolve, reject) => {
@@ -27,16 +23,15 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     getItemDetail(catalog)
       .then((result) => {
-        setItemDetail(result[0]);
+        const found = (result) =>
+          result.find((item) => item.id === parseInt(Id));
+
+        setItemDetail(found(result));
       })
       .catch((err) => console.log(err));
   });
 
-  console.log(catalog);
-
-  const itemFound = catalog.find((item) => item.id === { toFind });
-
-  console.log(itemFound);
-
-  return <div>{Detail ? <ItemDetail item={Detail} /> : "Cargando..."}</div>;
+  return (
+    <div>{itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}</div>
+  );
 };
