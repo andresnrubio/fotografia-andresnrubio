@@ -16,13 +16,13 @@ export const NavBar = () => {
           <a href="#menu">Ciudades</a>
           <ul className="subMenu">
             <li>
-              <a href="#menu">España</a>
+              <NavLink to="/category/spain">España</NavLink>
             </li>
             <li>
-              <a href="#menu">Francia</a>
+              <NavLink to="/category/england">Inglaterra</NavLink>
             </li>
             <li>
-              <a href="#menu">Inglaterra</a>
+              <NavLink to="/category/france">Francia</NavLink>
             </li>
           </ul>
         </li>

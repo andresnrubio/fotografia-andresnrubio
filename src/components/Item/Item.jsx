@@ -17,7 +17,7 @@ export const Item = (props) => {
         <h5>{props.title}</h5>
         <img src={props.img1} alt="Foto" />
 
-        <NavLink to="/item:id">
+        <NavLink to="/item/:id">
           <button className="btn  buttonSeeMore">Ver mas</button>
         </NavLink>
 

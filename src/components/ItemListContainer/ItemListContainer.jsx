@@ -2,8 +2,10 @@ import "./ItemListContainer.css";
 import catalog from "../../Catalog.json";
 import { ItemList } from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 export const ItemListContainer = () => {
+  const { categoryId } = useParams();
   const [catalogo, setCatalog] = useState([]);
 
   const readCatalog = (data) =>
@@ -25,10 +27,14 @@ export const ItemListContainer = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  if (!categoryId) {
+    return (
+      <div className="itemListContainer">
+        <ItemList catalogo={catalogo} />
+      </div>
+    );
+  }
+
   console.log(catalogo);
-  return (
-    <div className="itemListContainer">
-      <ItemList catalogo={catalogo} />
-    </div>
-  );
+  return <h1>SOY UNA CATEGORIA</h1>;
 };
