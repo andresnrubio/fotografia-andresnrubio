@@ -22,19 +22,24 @@ export const ItemListContainer = () => {
   useEffect(() => {
     readCatalog(catalog)
       .then((result) => {
-        setCatalog(result);
+        if (!categoryId) {
+          setCatalog(result);
+          console.log(result);
+        } else {
+          const filterCatalog = result.filter(
+            (category) => category.country === categoryId
+          );
+          setCatalog(filterCatalog);
+        }
       })
       .catch((err) => console.log(err));
-  }, []);
-
-  if (!categoryId) {
-    return (
-      <div className="itemListContainer">
-        <ItemList catalogo={catalogo} />
-      </div>
-    );
-  }
+  });
 
   console.log(catalogo);
-  return <h1>SOY UNA CATEGORIA</h1>;
+
+  return (
+    <div className="itemListContainer">
+      <ItemList catalogo={catalogo} />
+    </div>
+  );
 };
