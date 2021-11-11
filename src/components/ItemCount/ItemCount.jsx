@@ -2,14 +2,20 @@ import { useState } from "react";
 import "./ItemCount.css";
 import React from "react";
 
-export const ItemCount = ({ stock, initial }) => {
-  const [QItem, setQItem] = useState(initial);
+export const ItemCount = ({ stock, initial, onAdd }) => {
+  console.log(initial);
+
+  const [QItem, setQItem] = useState(null);
+
+  console.log(QItem);
 
   const DecreaseOne = () => {
+    console.log(QItem);
     if (QItem > initial) setQItem(QItem - 1);
   };
 
   const AddOne = () => {
+    console.log(QItem);
     if (QItem < stock) setQItem(QItem + 1);
   };
 
@@ -26,7 +32,15 @@ export const ItemCount = ({ stock, initial }) => {
         <div></div>
       </div>
 
-      <button className="addProductButton">Agregar</button>
+      <button
+        onClick={() => {
+          onAdd(QItem);
+          console.log(QItem);
+        }}
+        className="addProductButton"
+      >
+        Agregar al carrito
+      </button>
     </div>
   );
 };
