@@ -1,15 +1,19 @@
 import "./CartWidget.css";
-// import { useCart } from "../../Contexts/CartContext";
+import { useCart } from "../../Contexts/CartContext";
 
 export const CartWidget = () => {
-  // const CartCount = useCart();
+  const { cart } = useCart();
 
-  // console.log(CartCount);
+  console.log(cart);
 
-  return (
-    <div className="cart">
-      <p className="material-icons cartIcon">shopping_cart</p>
-      <p>1</p>
-    </div>
-  );
+  if (cart.length !== 0) {
+    return (
+      <div className="cart">
+        <p className="material-icons cartIcon">shopping_cart</p>
+        <p>{cart.length}</p>
+      </div>
+    );
+  } else {
+    return <></>;
+  }
 };

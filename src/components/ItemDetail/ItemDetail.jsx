@@ -40,7 +40,7 @@ export const ItemDetail = (props) => {
         <p>{itemDetail.description}</p>
 
         {cartButton ? (
-          <Link to="/cart">
+          <Link to="/carrito">
             <button>Ir a carrito</button>
           </Link>
         ) : (

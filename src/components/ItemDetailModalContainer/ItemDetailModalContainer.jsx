@@ -17,7 +17,7 @@ export const ItemDetailModalContainer = () => {
         } else {
           reject("No se encuentra el producto");
         }
-      }, 0);
+      }, 2000);
     });
 
   useEffect(() => {

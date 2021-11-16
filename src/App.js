@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./Contexts/CartContext";
+import { Cart } from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <div className="App">
           <header className="App-header">
             <NavBar />
+            <Route path="/carrito">
+              <Cart />
+            </Route>
           </header>
           <Switch>
             <Route exact path="/">

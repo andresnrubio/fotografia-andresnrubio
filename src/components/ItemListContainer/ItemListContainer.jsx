@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
         } else {
           reject("No se encuentra el catálogo");
         }
-      }, 0);
+      }, 3000);
     });
 
   useEffect(() => {

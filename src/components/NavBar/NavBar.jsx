@@ -13,7 +13,7 @@ export const NavBar = () => {
           <NavLink to="/"> Inicio </NavLink>
         </li>
         <li>
-          <a href="#menu">Ciudades</a>
+          <NavLink to="/">Ciudades</NavLink>
           <ul className="subMenu">
             <li>
               <NavLink to="/category/españa">España</NavLink>
@@ -27,9 +27,9 @@ export const NavBar = () => {
           </ul>
         </li>
         <li>
-          <a href="#menu">
+          <NavLink to="/carrito">
             <CartWidget />
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
