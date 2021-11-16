@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
         } else {
           reject("No se encuentra el catálogo");
         }
-      }, 3000);
+      }, 0);
     });
 
   useEffect(() => {
@@ -24,7 +24,6 @@ export const ItemListContainer = () => {
       .then((result) => {
         if (!categoryId) {
           setCatalog(result);
-          console.log(result);
         } else {
           const filterCatalog = result.filter(
             (category) => category.country === categoryId
@@ -34,8 +33,6 @@ export const ItemListContainer = () => {
       })
       .catch((err) => console.log(err));
   });
-
-  console.log(catalogo);
 
   return (
     <div className="itemListContainer">

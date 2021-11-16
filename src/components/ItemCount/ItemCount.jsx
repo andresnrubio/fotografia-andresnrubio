@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ItemCount.css";
 import React from "react";
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial, onAdd }) => {
   const [QItem, setQItem] = useState(initial);
 
   const DecreaseOne = () => {
@@ -26,7 +26,9 @@ export const ItemCount = ({ stock, initial }) => {
         <div></div>
       </div>
 
-      <button className="addProductButton">Agregar</button>
+      <button onClick={() => onAdd(QItem)} className="addProductButton">
+        Agregar
+      </button>
     </div>
   );
 };

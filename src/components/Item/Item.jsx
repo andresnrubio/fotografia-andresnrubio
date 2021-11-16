@@ -5,8 +5,6 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 export const Item = (props) => {
-  console.log(props);
-
   useEffect(() => {
     M.AutoInit();
   });
