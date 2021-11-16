@@ -3,13 +3,17 @@ import "./ItemCount.css";
 import React from "react";
 
 export const ItemCount = ({ stock, initial, onAdd }) => {
+
   const [QItem, setQItem] = useState(initial);
 
+
   const DecreaseOne = () => {
+    console.log(QItem);
     if (QItem > initial) setQItem(QItem - 1);
   };
 
   const AddOne = () => {
+    console.log(QItem);
     if (QItem < stock) setQItem(QItem + 1);
   };
 
@@ -26,8 +30,10 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         <div></div>
       </div>
 
+
       <button onClick={() => onAdd(QItem)} className="addProductButton">
-        Agregar
+        Agregar al carrito
+
       </button>
     </div>
   );
