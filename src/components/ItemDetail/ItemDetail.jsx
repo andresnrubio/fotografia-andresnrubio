@@ -40,9 +40,15 @@ export const ItemDetail = (props) => {
         <p>{itemDetail.description}</p>
 
         {cartButton ? (
-          <Link to="/carrito">
-            <button>Ir a carrito</button>
-          </Link>
+          <div className="BuyOrMore">
+            <Link to="/carrito">
+              <button>Terminar mi compra</button>
+            </Link>
+
+            <Link to="./">
+              <button>Serguir comprando</button>
+            </Link>
+          </div>
         ) : (
           <div className="ItemAdd">
             <ItemCount
@@ -52,7 +58,6 @@ export const ItemDetail = (props) => {
             />
           </div>
         )}
-        <button onClick={() => removeItem(itemDetail.id)}>BORRAR</button>
       </div>
     </div>
   );

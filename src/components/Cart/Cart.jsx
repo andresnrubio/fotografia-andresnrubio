@@ -1,11 +1,10 @@
 import "./Cart.css";
 import { useCart } from "../../Contexts/CartContext";
 import { ItemCart } from "../ItemCart/ItemCart";
+import { NavLink } from "react-router-dom";
 
 export const Cart = () => {
   const { cart, clear } = useCart();
-
-  console.log(cart);
 
   const subtotal = (cart) => {
     let SubTotal = 0;
@@ -20,34 +19,15 @@ export const Cart = () => {
       <section className="cartContainer">
         <div className="itemCartList">
           <h1>El carrito esta Vacio</h1>
+          <NavLink to="./">
+            <button>Ver Catalogo </button>
+          </NavLink>
         </div>
 
         <div className="subtotalBar">
           <div>
-            <button onClick={clear}>Vaciar Carrito</button>
             <button> Actualizar carrito</button>
           </div>
-          <p>
-            Total $<span>{subtotal(cart)}</span>
-          </p>
-        </div>
-        <div className="goToShipping">
-          {/* <p>
-            Envio $<span>XXXX</span>
-          </p>
-          <p>
-            Impuestos $
-            <span>
-              {(cart) => {
-                return subtotal(cart) * 0.21;
-              }}
-            </span>
-          </p>
-          <p>
-            Total $<span>XXXX</span>
-          </p> */}
-
-          <button>Terminar mi compra</button>
         </div>
       </section>
     );

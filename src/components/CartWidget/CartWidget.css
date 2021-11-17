@@ -13,3 +13,8 @@
 }
 
 .CartCount {}
+
+.emptyCart {
+
+    display: none;
+}
