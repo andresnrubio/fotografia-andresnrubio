@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 export const ItemDetailModalContainer = () => {
-  const { item: id } = useParams();
+  const { Id } = useParams();
 
-  const [Detail, setItemDetail] = useState([]);
+  const [itemDetail, setItemDetail] = useState({});
 
   const getItemDetail = (data) =>
     new Promise((resolve, reject) => {
@@ -23,12 +23,17 @@ export const ItemDetailModalContainer = () => {
   useEffect(() => {
     getItemDetail(catalog)
       .then((result) => {
-        setItemDetail(result[0]);
+        const found = (result) =>
+          result.find((item) => item.id === parseInt(Id));
+
+        setItemDetail(found(result));
       })
       .catch((err) => console.log(err));
   });
 
   return (
-    <div>{Detail ? <ItemDetailModal item={Detail} /> : "Cargando..."}</div>
+    <div>
+      {itemDetail ? <ItemDetailModal item={itemDetail} /> : "Cargando..."}
+    </div>
   );
 };

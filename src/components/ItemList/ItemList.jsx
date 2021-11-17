@@ -2,7 +2,6 @@ import "./ItemList.css";
 import { Item } from "../Item/Item";
 
 export const ItemList = (props) => {
-  console.log(props);
   return (
     <div className="itemList">
       {props.catalogo.length

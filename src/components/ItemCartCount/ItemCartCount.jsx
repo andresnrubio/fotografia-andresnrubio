@@ -1,8 +1,7 @@
+import "./ItemCartCount.css";
 import { useState } from "react";
-import "./ItemCount.css";
-import React from "react";
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCartCount = ({ stock, initial }) => {
   const [QItem, setQItem] = useState(initial);
 
   const DecreaseOne = () => {
@@ -14,7 +13,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div className="addProduct">
+    <div className="ItemCartCount">
       <div className="countProduct">
         <p onClick={DecreaseOne} className="material-icons buttonCard">
           remove_circle_outline
@@ -25,10 +24,6 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         </p>
         <div></div>
       </div>
-
-      <button onClick={() => onAdd(QItem)} className="addProductButton">
-        Agregar al carrito
-      </button>
     </div>
   );
 };

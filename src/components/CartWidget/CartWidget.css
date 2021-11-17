@@ -11,3 +11,10 @@
 .cartIcon:hover {
     height: 100%;
 }
+
+.CartCount {}
+
+.emptyCart {
+
+    display: none;
+}

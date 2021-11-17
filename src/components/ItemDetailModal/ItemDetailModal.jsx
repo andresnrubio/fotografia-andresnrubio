@@ -2,11 +2,7 @@ import "./ItemDetailModal.css";
 import { ItemCount } from "../ItemCount/ItemCount";
 
 export const ItemDetailModal = (props) => {
-  console.log(props.item);
-
   const itemDetail = props.item;
-
-  console.log(itemDetail);
 
   return (
     <div className="ItemDetail">

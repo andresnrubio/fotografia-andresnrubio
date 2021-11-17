@@ -1,8 +1,13 @@
 import "./NavBar.css";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../Contexts/CartContext";
 
 export const NavBar = () => {
+  const { cart } = useCart();
+
+  const carrito = cart.length !== 0 ? "show" : "noShow";
+
   return (
     <nav className="navBar">
       <NavLink to="/">
@@ -13,7 +18,7 @@ export const NavBar = () => {
           <NavLink to="/"> Inicio </NavLink>
         </li>
         <li>
-          <a href="#menu">Ciudades</a>
+          <NavLink to="/">Ciudades</NavLink>
           <ul className="subMenu">
             <li>
               <NavLink to="/category/españa">España</NavLink>
@@ -26,10 +31,10 @@ export const NavBar = () => {
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#menu">
+        <li className={carrito}>
+          <NavLink to="/carrito">
             <CartWidget />
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>

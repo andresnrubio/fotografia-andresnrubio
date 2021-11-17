@@ -2,19 +2,22 @@ import "./ItemDetail.css";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../Contexts/CartContext";
 
 export const ItemDetail = (props) => {
+  const { addItem, removeItem } = useCart();
+
   const [cartButton, setCartButton] = useState(false);
 
-  const [qItemToAdd, setqItemToadd] = useState(0);
-  console.log(qItemToAdd);
+  const [qItemToAdd, setQItemToAdd] = useState(0);
+
   const itemDetail = props.item;
 
   const onAdd = (qItemToAdd) => {
-    setqItemToadd(qItemToAdd);
-
+    setQItemToAdd(qItemToAdd);
     if (qItemToAdd >= 1) {
       setCartButton(true);
+      addItem(itemDetail, qItemToAdd);
     }
   };
 
@@ -37,13 +40,19 @@ export const ItemDetail = (props) => {
         <p>{itemDetail.description}</p>
 
         {cartButton ? (
-          <Link to="/cart">
-            <button>Ir a carrito</button>
-          </Link>
+          <div className="BuyOrMore">
+            <Link to="/carrito">
+              <button>Terminar mi compra</button>
+            </Link>
+
+            <Link to="./">
+              <button>Serguir comprando</button>
+            </Link>
+          </div>
         ) : (
           <div className="ItemAdd">
             <ItemCount
-              initial={itemDetail.initial}
+              initial={qItemToAdd}
               stock={itemDetail.stock}
               onAdd={onAdd}
             />
