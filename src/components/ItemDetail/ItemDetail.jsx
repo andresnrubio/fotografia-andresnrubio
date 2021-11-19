@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../Contexts/CartContext";
 
 export const ItemDetail = (props) => {
-  const { addItem, removeItem } = useCart();
+  const { addItem } = useCart();
 
   const [cartButton, setCartButton] = useState(false);
 
@@ -45,8 +45,8 @@ export const ItemDetail = (props) => {
               <button>Terminar mi compra</button>
             </Link>
 
-            <Link to="./">
-              <button>Serguir comprando</button>
+            <Link to="/">
+              <button>Seguir comprando</button>
             </Link>
           </div>
         ) : (
