@@ -1,23 +1,55 @@
 .cardProduct {
-    color: #303030;
+    color: #fff;
     margin: 1rem;
     display: flex;
-    justify-content: space-evenly;
-    width: 20rem;
-    padding: 1rem;
+    width: 18rem;
+    height: 350px;
     flex-direction: column;
-    background-color: darkgrey;
-    border: solid #303030 2px;
+    background: linear-gradient(90deg, rgba(15, 32, 39, 1) 0%, rgba(44, 83, 100, 1) 100%);
+    box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+    overflow: hidden;
+    border-radius: 15px;
 }
+
 
 .cardProduct img {
-    padding: 3px;
+    object-fit: cover;
+    height: 350px;
 }
 
-.buttonSeeMore {
+/* .buttonSeeMore {
     width: 75%;
     align-self: center;
 
+} */
+
+.cardProduct h5 {
+    text-align: left;
+}
+
+.cardProduct button {
+    background-color: rgba(15, 32, 39, 0.8);
+    border-radius: 15px;
+    border: #fff 1px solid;
+    margin: 0 1rem 0 0;
+    height: 2rem;
+    width: 6rem;
+    padding: 1px;
+}
+
+.btn:hover {
+    background: #FD9971;
+    color: #0d0d0d;
+}
+
+.iconAdd {
+    font-size: 1.3rem;
+    text-decoration: none;
+
+}
+
+.iconAdd {
+    font-size: 1.5rem;
 }
 
 #modal1 {
@@ -28,4 +60,18 @@
     margin-left: -400px;
     margin-top: 10%;
 
+}
+
+.gradient {
+    background: linear-gradient(0deg, rgba(15, 32, 39, 0.8) 25%, rgba(28, 55, 66, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    width: 18rem;
+    height: 350px;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.options {
+    margin-top: 250px;
+    margin-left: 1rem;
+    position: absolute;
 }
