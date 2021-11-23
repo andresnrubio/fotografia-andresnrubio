@@ -12,22 +12,26 @@ export const Item = (props) => {
   return (
     <>
       <div className="cardProduct">
-        <h5>{props.title}</h5>
-        <img src={props.img1} alt="Foto" />
+        <div className="gradient"></div>
+        <img src={props.img1} alt="Foto" id="crop" />
+        <div className="options">
+          <h5>{props.title}</h5>
+          <NavLink to={`/item/${props.id}`}>
+            <button className="btn  buttonSeeMore">
+              <p className="material-icons iconDetail">zoom_in</p>
+            </button>
+          </NavLink>
 
-        <NavLink to={`/item/${props.id}`}>
-          <button className="btn  buttonSeeMore">Ver mas</button>
-        </NavLink>
-
-        <button
-          data-target="modal1"
-          className="btn modal-trigger buttonSeeMore"
-        >
-          Comprar
-        </button>
-        <div id="modal1" className="modal">
-          <div className="modal-content ">
-            <ItemDetailModalContainer />
+          <button
+            data-target="modal1"
+            className="btn modal-trigger buttonSeeMore"
+          >
+            <p className="material-icons iconAdd">add_shopping_cart</p>
+          </button>
+          <div id="modal1" className="modal">
+            <div className="modal-content ">
+              <ItemDetailModalContainer />
+            </div>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-color: #303030;
+  background: aliceblue;
 }
 
 .App-logo {
@@ -58,7 +58,8 @@
 
 .App-footer {
   flex-shrink: 0;
-  background-color: darkslategray;
+  background-color: rgba(15, 32, 39);
+  color: #fff;
   height: 3rem;
   display: flex;
   flex-direction: row;
