@@ -61,6 +61,8 @@ export const ItemDetailContainer = () => {
   // });
 
   return (
-    <div>{itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}</div>
+    <div class="container">
+      {itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}
+    </div>
   );
 };

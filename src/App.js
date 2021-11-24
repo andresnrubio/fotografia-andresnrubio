@@ -13,21 +13,23 @@ function App() {
         <div className="App">
           <header className="App-header">
             <NavBar />
-            <Route path="/carrito">
-              <Cart />
-            </Route>
           </header>
-          <Switch>
-            <Route exact path="/">
-              <ItemListContainer />
-            </Route>
-            <Route path="/category/:categoryId">
-              <ItemListContainer />
-            </Route>
-            <Route path="/item/:Id">
-              <ItemDetailContainer />
-            </Route>
-          </Switch>
+          <body>
+            <Switch>
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route path="/category/:categoryId">
+                <ItemListContainer />
+              </Route>
+              <Route path="/item/:Id">
+                <ItemDetailContainer />
+              </Route>
+              <Route path="/carrito">
+                <Cart />
+              </Route>
+            </Switch>
+          </body>
           <footer className="App-footer">Hola soy el footer</footer>
         </div>
       </BrowserRouter>

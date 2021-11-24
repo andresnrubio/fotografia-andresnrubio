@@ -1,17 +1,38 @@
 import "./Cart.css";
 import { useCart } from "../../Contexts/CartContext";
 import { ItemCart } from "../ItemCart/ItemCart";
+import { BuyerForm } from "../BuyerForm/BuyerForm";
 import { NavLink } from "react-router-dom";
+import { useState } from "react/cjs/react.development";
+import { addDoc, collection, getFirestore } from "@firebase/firestore";
 
 export const Cart = () => {
   const { cart, clear } = useCart();
 
-  const subtotal = (cart) => {
+  const total = (cart) => {
     let SubTotal = 0;
     for (let i = 0; i < cart.length; i++) {
       SubTotal = SubTotal + cart[i].quantity * cart[i].price;
     }
     return SubTotal;
+  };
+
+  const [order, setOrder] = useState({});
+
+  const sendOrder = () => {
+    setOrder({
+      buyer: { name: "Carlos", phone: "1144324411", email: "carlos@mail.com" },
+      items: [{ cart }],
+      total: total(cart),
+    });
+    console.log(order);
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+
+    addDoc(ordersCollection, order).then(({ id }) =>
+      alert(`Se genero su order con el numero ${id}`)
+    );
+    clear();
   };
 
   if (cart.length === 0) {
@@ -56,7 +77,7 @@ export const Cart = () => {
             <button> Actualizar carrito</button>
           </div>
           <p>
-            Total $<span>{subtotal(cart)}</span>
+            Total $<span>{total(cart)}</span>
           </p>
         </div>
         <div className="goToShipping">
@@ -75,8 +96,18 @@ export const Cart = () => {
             Total $<span>XXXX</span>
           </p> */}
 
-          <button>Terminar mi compra</button>
+          <button onClick={sendOrder} className="buy">
+            Terminar mi compra
+          </button>
         </div>
+        {/* <div>
+          <label>Nombre y apellido</label>
+          <BuyerForm />
+          <label>Correo Electronico</label>
+          <BuyerForm />
+          <label>Telefono</label>
+          <BuyerForm />
+        </div> */}
       </section>
     );
   }
