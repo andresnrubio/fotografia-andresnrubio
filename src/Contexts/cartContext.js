@@ -15,7 +15,6 @@ export const CartProvider = ({ children }) => {
     const existe = cart.filter((x) => x.id === item.id).length > 0;
 
     if (existe === false) {
-      console.log(existe);
       const ItemCart = { ...item, quantity };
       setCart([...cart, ItemCart]);
     }

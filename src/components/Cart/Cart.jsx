@@ -1,7 +1,7 @@
 import "./Cart.css";
 import { useCart } from "../../Contexts/CartContext";
 import { ItemCart } from "../ItemCart/ItemCart";
-import { BuyerForm } from "../BuyerForm/BuyerForm";
+// import { BuyerForm } from "../BuyerForm/BuyerForm";
 import { NavLink } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 import { addDoc, collection, getFirestore } from "@firebase/firestore";

@@ -7,7 +7,6 @@ import { getDoc, doc } from "@firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const { Id } = useParams();
-  console.log(Id);
   const [itemDetail, setItemDetail] = useState({});
 
   // useEffect(() => {
@@ -36,7 +35,6 @@ export const ItemDetailContainer = () => {
       }
     });
   }, [Id]);
-  console.log(itemDetail);
 
   // const getItemDetail = (data) =>
   //   new Promise((resolve, reject) => {
@@ -61,7 +59,7 @@ export const ItemDetailContainer = () => {
   // });
 
   return (
-    <div class="container">
+    <div className="container">
       {itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}
     </div>
   );

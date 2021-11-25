@@ -28,16 +28,16 @@ export const ItemDetail = (props) => {
           "  Home > Impresiones fotograficas > Continente > Pais > Ciudad > Titulo"
         }
       </p>
-      <div class="miniatureOne">
+      <div className="miniatureOne">
         <img src={itemDetail.img1} alt="mini1" className="miniature" />
       </div>
-      <div class="miniatureTwo">
+      <div className="miniatureTwo">
         <img src={itemDetail.img2} alt="mini2" className="miniature" />
       </div>
-      <div class="miniatureThree">
+      <div className="miniatureThree">
         <img src={itemDetail.img3} alt="mini3" className="miniature" />
       </div>
-      <div class="miniatureFour"></div>
+      <div className="miniatureFour"></div>
       <div className="itemImg ">
         <img
           src={itemDetail.img1}
