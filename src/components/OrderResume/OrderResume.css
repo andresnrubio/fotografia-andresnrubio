@@ -1,0 +1,31 @@
+.statusBoxContainer {
+    display: flex;
+    width: 750px;
+    margin-left: 1rem;
+    border: #d3d3d37d 1px solid;
+    border-radius: 5px;
+}
+
+.statusBox {
+    width: 150px;
+    border-right: #d3d3d37d 1px solid;
+    border-left: #d3d3d37d 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.buyerDetail {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+
+}
+
+.line {
+    border-top: lightgray 2px solid;
+
+    width: 90%;
+
+}

@@ -5,6 +5,7 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./Contexts/CartContext";
 import { Cart } from "./components/Cart/Cart";
+import { OrderResumeContainer } from "./components/OrderResumeContainer/OrderResumeContainer";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/carrito">
               <Cart />
+            </Route>
+            <Route path="/order">
+              <OrderResumeContainer />
             </Route>
           </Switch>
 
