@@ -13,17 +13,14 @@ export const ItemCartCount = ({ stock, initial }) => {
   };
 
   return (
-    <div className="ItemCartCount">
-      <div className="countProduct">
-        <p onClick={DecreaseOne} className="material-icons buttonCard">
-          remove_circle_outline
-        </p>
-        <p className="qItem">{QItem}</p>
-        <p onClick={AddOne} className="material-icons buttonCard">
-          add_circle_outline
-        </p>
-        <div></div>
-      </div>
+    <div className="countProductCart">
+      <p onClick={DecreaseOne} className="material-icons buttonCard">
+        remove_circle_outline
+      </p>
+      <p className="qItem">{QItem}</p>
+      <p onClick={AddOne} className="material-icons buttonCard">
+        add_circle_outline
+      </p>
     </div>
   );
 };

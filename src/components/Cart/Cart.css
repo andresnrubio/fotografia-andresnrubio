@@ -1,25 +1,52 @@
-.cartContainer {
-    width: 95%;
+.orderView {
     display: flex;
-    flex-direction: column;
-    min-height: 600px;
-    margin: 2.5%;
+    justify-content: space-around;
+    padding: .5rem;
+}
+
+.formContainer {
+    width: 418px;
+    text-align: initial;
+}
+
+.formContainer h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .itemCartList {
-    background-color: cadetblue;
-    min-height: 500px;
+    width: 418px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    height: fit-content;
+}
 
+.itemCartList h5 {
+    margin: 0 0 0 1rem;
+    text-align: initial;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.itemCartEmpty h2 {
+    font-size: 23px;
+}
+
+.itemCartEmpty p {
+    font-size: 13px;
 }
 
 .subtotalBar {
     height: 4rem;
-    background-color: bisque;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     color: #000;
     align-items: center;
+    align-self: center;
+    width: 94%;
 }
 
 .subtotalBar div button {

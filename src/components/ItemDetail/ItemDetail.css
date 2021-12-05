@@ -5,7 +5,6 @@
 
 }
 
-
 .miniature {
     height: 100%;
     width: 100%;
@@ -52,16 +51,6 @@
     object-fit: contain;
 }
 
-
-
-
-
-.line {
-    border-top: lightgray 2px solid;
-
-    width: 90%;
-
-}
 
 .detail {
     grid-area: 2 / 6 / 6 / 10;

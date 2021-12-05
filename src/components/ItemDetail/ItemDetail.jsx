@@ -50,7 +50,7 @@ export const ItemDetail = (props) => {
         <h5>{itemDetail.title}</h5>
 
         <p className="description">{itemDetail.description}</p>
-        <div className="line" />
+        <div className="line wv90" />
         <h4>$ {itemDetail.price}</h4>
         <br />
         <ul>

@@ -11,19 +11,17 @@ export const ItemCart = (props) => {
   const { removeItem } = useCart();
 
   return (
-    <div className="ItemCart">
+    <div className="itemCart">
       <div className="itemCartDetail">
         <img src={props.img1} alt={props.title} />
         <p>{props.title}</p>
       </div>
       <div className="priceDetail">
-        <ItemCartCount stock={props.stock} initial={props.quantity} />
-
-        <p>
-          Subtotal $<span>{subtotalItem(props.quantity, props.price)}</span>
+        <p className="itemPrice">
+          $<span>{subtotalItem(props.quantity, props.price)}</span>
         </p>
-
-        <button onClick={() => removeItem(props.id)}> X </button>
+        <ItemCartCount stock={props.stock} initial={props.quantity} />
+        <button onClick={() => removeItem(props.id)}> Quitar </button>
       </div>
     </div>
   );

@@ -9,20 +9,6 @@ export const ItemDetailContainer = () => {
   const { Id } = useParams();
   const [itemDetail, setItemDetail] = useState({});
 
-  // useEffect(() => {
-  //   const db = getFirestore();
-  //   console.log(db);
-
-  //   const itemRef = collection(db, "items");
-  //   const doc = itemRef.get();
-
-  //   if (!doc.exists) {
-  //     console.log("No such document!");
-  //   } else {
-  //     console.log("Document data:", doc.data());
-  //   }
-  // }, []);
-
   useEffect(() => {
     // ESTO ES PARA TRAER UN SOLO ELEMENTO DE LA COLECCION 👀
     const db = getFirestore();
@@ -35,28 +21,6 @@ export const ItemDetailContainer = () => {
       }
     });
   }, [Id]);
-
-  // const getItemDetail = (data) =>
-  //   new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       if (data) {
-  //         resolve(data);
-  //       } else {
-  //         reject("No se encuentra el producto");
-  //       }
-  //     }, 2000);
-  //   });
-
-  // useEffect(() => {
-  //   getItemDetail(catalog)
-  //     .then((result) => {
-  //       const found = (result) =>
-  //         result.find((item) => item.id === parseInt(Id));
-
-  //       setItemDetail(found(result));
-  //     })
-  //     .catch((err) => console.log(err));
-  // });
 
   return (
     <div className="container">

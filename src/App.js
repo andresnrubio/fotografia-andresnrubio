@@ -4,8 +4,8 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./Contexts/CartContext";
-import { Cart } from "./components/Cart/Cart";
 import { OrderResumeContainer } from "./components/OrderResumeContainer/OrderResumeContainer";
+import { CartContainer } from "./components/CartContainer/CartContainer";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
               <ItemDetailContainer />
             </Route>
             <Route path="/carrito">
-              <Cart />
+              <CartContainer />
             </Route>
             <Route path="/order">
               <OrderResumeContainer />
