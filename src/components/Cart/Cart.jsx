@@ -36,10 +36,10 @@ export const Cart = () => {
   const sendOrder = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-
-    addDoc(ordersCollection, order).then(({ id }) =>
-      alert(`Se genero su order con el numero ${id}`)
-    );
+    console.log(order);
+    addDoc(ordersCollection, order).then(({ id }) => {
+      console.log(`Se genero su order con el numero ${id}`);
+    });
     console.log(order);
     clear();
   };
@@ -81,12 +81,14 @@ export const Cart = () => {
             <form onSubmit={handleSubmit}>
               <label>Nombre y apellido</label>
               <BuyerForm setBuyer={setBuyer} field="name" buyer={buyer} />
-              <label>Correo Electronico</label>
-              <BuyerForm setBuyer={setBuyer} field="email" buyer={buyer} />
               <label>Telefono</label>
               <BuyerForm setBuyer={setBuyer} field="phone" buyer={buyer} />
               <label>Direccion de envio</label>
               <BuyerForm setBuyer={setBuyer} field="adress" buyer={buyer} />
+              <label>Correo Electronico</label>
+              <BuyerForm setBuyer={setBuyer} field="email" buyer={buyer} />
+              <label>Confirmar Correo Electronico</label>
+              <BuyerForm setBuyer={setBuyer} field="email" buyer={buyer} />
               <button type="submit" className="buttonBlue">
                 Cargar Pedido
               </button>
@@ -114,7 +116,6 @@ export const Cart = () => {
         <div className="subtotalBar">
           <div>
             <button onClick={clear}>Vaciar Carrito</button>
-            <button> Actualizar carrito</button>
           </div>
           <p>
             Total $<span>{total(cart)}</span>

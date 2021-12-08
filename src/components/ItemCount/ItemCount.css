@@ -32,7 +32,6 @@
 }
 
 .buttonCard:active {
-    background-color: #666666;
     color: #fff;
     cursor: default;
 }

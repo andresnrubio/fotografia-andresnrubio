@@ -8,7 +8,7 @@
     background: linear-gradient(90deg, rgba(15, 32, 39, 1) 0%, rgba(44, 83, 100, 1) 100%);
     box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 
@@ -67,7 +67,7 @@
     width: 18rem;
     height: 350px;
     position: absolute;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .options {

@@ -3,4 +3,6 @@
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-evenly;
+    max-width: 900px;
+    align-self: center;
 }

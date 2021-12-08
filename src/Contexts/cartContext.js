@@ -24,6 +24,16 @@ export const CartProvider = ({ children }) => {
   const removeItem = (itemId) => {
     setCart(cart.filter((x) => x.id !== itemId));
   };
+
+  //Funcion para modificar la cantidad de un item del carrito
+  const itemUpdate = (item, Q) => {
+    const indexItem = cart.findIndex((x) => x.id === item.id);
+    cart[indexItem].quantity = Q;
+    setCart(cart);
+
+    console.log(cart);
+  };
+
   //Funcion para vaciar el carrito
   const clear = () => {
     setCart([]);
@@ -39,7 +49,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
+      value={{ cart, addItem, removeItem, clear, isInCart, itemUpdate }}
     >
       {children}
     </CartContext.Provider>
