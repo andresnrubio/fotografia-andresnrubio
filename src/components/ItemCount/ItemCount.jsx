@@ -19,16 +19,14 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         <p onClick={DecreaseOne} className="material-icons buttonCard reduce">
           remove_circle_outline
         </p>
-        <p className="qItem">{QItem}</p>
+        <p className="qItem" onChange={() => onAdd(QItem)}>
+          {QItem}
+        </p>
         <p onClick={AddOne} className="material-icons buttonCard">
           add_circle_outline
         </p>
         <div></div>
       </div>
-
-      <button onClick={() => onAdd(QItem)} className="addProductButton">
-        Agregar al carrito
-      </button>
     </>
   );
 };

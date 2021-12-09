@@ -54,13 +54,10 @@
     width: 100%;
 }
 
-.subtotalBar div button {
-    height: 2.5 rem;
-    width: 250 px;
-    border-radius: 5 px;
-    border: 0 px;
-    background-color: #0038b1;
-    color: #fff;
+.subtotalBar button {
+    margin: 0;
+    width: 150px;
+
 }
 
 .goToShipping {

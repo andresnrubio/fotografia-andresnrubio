@@ -6,6 +6,7 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./Contexts/CartContext";
 import { OrderResumeContainer } from "./components/OrderResumeContainer/OrderResumeContainer";
 import { CartContainer } from "./components/CartContainer/CartContainer";
+import { BuyerForm } from "./components/BuyerForm/BuyerForm";
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
             </Route>
           </Switch>
 
-          <footer className="App-footer">Hola soy el footer</footer>
+          <footer className="App-footer">
+            Impresiones fotograficas Andres N Rubio
+          </footer>
         </div>
       </BrowserRouter>
     </CartProvider>

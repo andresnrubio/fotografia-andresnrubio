@@ -2,7 +2,6 @@ import "./ItemCart.css";
 
 import { ItemCartCount } from "../ItemCartCount/ItemCartCount";
 import { useCart } from "../../Contexts/CartContext";
-import { useState } from "react";
 
 export const ItemCart = (props) => {
   const subtotalItem = (quantity, price) => {
@@ -10,8 +9,6 @@ export const ItemCart = (props) => {
   };
 
   const { removeItem, itemUpdate } = useCart();
-
-  const [newQ, setNewQ] = useState([]);
 
   const updateItem = (QItem) => {
     itemUpdate(props, QItem);

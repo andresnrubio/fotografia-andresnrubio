@@ -31,9 +31,6 @@ export const NavBar = () => {
             </li>
           </ul>
         </li>
-        <li>
-          <NavLink to="/order"></NavLink>
-        </li>
         <li className={carrito}>
           <NavLink to="/carrito">
             <CartWidget />

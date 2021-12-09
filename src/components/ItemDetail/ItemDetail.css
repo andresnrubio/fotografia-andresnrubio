@@ -1,8 +1,13 @@
-.breadcrumbs {
-    grid-area: 1 / 1 / 2 / 10;
-    display: flex;
-    align-items: flex-end;
-
+.addProductButton {
+    margin-top: 1rem;
+    width: 90%;
+    height: 2.5rem;
+    max-width: 90%;
+    border-radius: 5px;
+    border: 0px;
+    justify-content: center;
+    background-color: #0038b1;
+    color: #fff;
 }
 
 .miniature {

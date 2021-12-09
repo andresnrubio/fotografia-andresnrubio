@@ -1,5 +1,5 @@
 import "./ItemListContainer.css";
-// import catalog from "../../Catalog.json";
+
 import { ItemList } from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -25,10 +25,15 @@ export const ItemListContainer = () => {
       }
     });
   }, [categoryId]);
-
+  console.log(catalogo);
   return (
-    <div className="itemListContainer">
-      <ItemList catalogo={catalogo} />
-    </div>
+    <>
+      <div>
+        <img src="" alt="" />
+      </div>
+      <div className="itemListContainer">
+        <ItemList catalogo={catalogo} />
+      </div>
+    </>
   );
 };

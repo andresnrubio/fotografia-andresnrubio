@@ -5,7 +5,6 @@ import { BuyerForm } from "../BuyerForm/BuyerForm";
 import { NavLink } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 import { addDoc, collection, getFirestore } from "@firebase/firestore";
-import { useEffect } from "react";
 
 export const Cart = () => {
   const { cart, clear } = useCart();
@@ -18,37 +17,20 @@ export const Cart = () => {
     return SubTotal;
   };
 
-  const [buyer, setBuyer] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    adress: "",
-  });
   const date = new Date();
   const orderDate = date.toLocaleDateString();
 
-  const [order, setOrder] = useState({});
+  const [buyer, setBuyer] = useState({});
 
-  useEffect(() => {
-    console.log(buyer);
-  }, [buyer]);
-
-  const sendOrder = () => {
-    const db = getFirestore();
-    const ordersCollection = collection(db, "orders");
-    console.log(order);
-    addDoc(ordersCollection, order).then(({ id }) => {
-      console.log(`Se genero su order con el numero ${id}`);
-    });
-    console.log(order);
-    clear();
+  const getBuyer = (data) => {
+    setBuyer(data);
   };
 
-  const handleSubmit = (event) => {
+  const [order, setOrder] = useState({});
+
+  const SendOrder = () => {
     console.log(buyer);
-    console.log(cart);
-    console.log(total(cart));
-    console.log(orderDate);
+    console.log({ cart });
 
     setOrder({
       buyer: { buyer },
@@ -56,7 +38,17 @@ export const Cart = () => {
       total: total(cart),
       date: orderDate,
     });
-    event.preventDefault();
+
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+    console.log(order);
+    if (order !== {}) {
+      addDoc(ordersCollection, order).then(({ id }) => {
+        console.log(`Se genero su order con el numero ${id}`);
+      });
+      console.log(order);
+    }
+    // clear();
   };
 
   if (cart.length === 0) {
@@ -78,21 +70,7 @@ export const Cart = () => {
         <div className="orderView">
           <div className="formContainer">
             <h5>Datos personales</h5>
-            <form onSubmit={handleSubmit}>
-              <label>Nombre y apellido</label>
-              <BuyerForm setBuyer={setBuyer} field="name" buyer={buyer} />
-              <label>Telefono</label>
-              <BuyerForm setBuyer={setBuyer} field="phone" buyer={buyer} />
-              <label>Direccion de envio</label>
-              <BuyerForm setBuyer={setBuyer} field="adress" buyer={buyer} />
-              <label>Correo Electronico</label>
-              <BuyerForm setBuyer={setBuyer} field="email" buyer={buyer} />
-              <label>Confirmar Correo Electronico</label>
-              <BuyerForm setBuyer={setBuyer} field="email" buyer={buyer} />
-              <button type="submit" className="buttonBlue">
-                Cargar Pedido
-              </button>
-            </form>
+            <BuyerForm getBuyer={getBuyer} />
           </div>
 
           <div className="itemCartList">
@@ -114,17 +92,20 @@ export const Cart = () => {
           </div>
         </div>
         <div className="subtotalBar">
-          <div>
-            <button onClick={clear}>Vaciar Carrito</button>
-          </div>
+          <button className="buttonBlue" onClick={clear}>
+            Vaciar Carrito
+          </button>
+
           <p>
             Total $<span>{total(cart)}</span>
           </p>
         </div>
         <div className="goToShipping">
-          <button onClick={sendOrder} className="buy">
-            Terminar mi compra
-          </button>
+          <NavLink to={{ pathname: "/order", state: order }}>
+            <button onClick={SendOrder} className="buy">
+              Terminar mi compra
+            </button>
+          </NavLink>
         </div>
       </>
     );
