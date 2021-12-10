@@ -28,7 +28,7 @@ export const Cart = () => {
   };
 
   const SendOrder = () => {
-    console.log(buyer);
+    console.log(buyer.length);
 
     const orderToSend = {
       buyer: buyer,
@@ -97,7 +97,11 @@ export const Cart = () => {
           </p>
         </div>
         <div className="goToShipping">
-          <button onClick={SendOrder} className="buy">
+          <button
+            disabled={!Object.keys(buyer).length}
+            onClick={SendOrder}
+            className="buy"
+          >
             Terminar mi compra
           </button>
         </div>
