@@ -27,31 +27,24 @@ export const Cart = () => {
     console.log(buyer);
   };
 
-  const [order, setOrder] = useState({});
-  const [orderParam, setOrderParam] = useState("");
-
-  const SendOrder = async () => {
+  const SendOrder = () => {
     console.log(buyer);
-    console.log(order);
-    await setOrder({
+
+    const orderToSend = {
       buyer: buyer,
       items: cart,
       total: total(cart),
       date: orderDate,
-    });
+    };
 
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    console.log(order);
+    console.log(orderToSend);
 
-    if (order !== {}) {
-      addDoc(ordersCollection, order).then(({ id }) => {
-        console.log(`Se genero su order con el numero ${id}`);
-        setOrderParam(id);
-      });
-    }
-
-    // clear();
+    addDoc(ordersCollection, orderToSend).then(({ id }) => {
+      console.log(`Se genero su order con el numero ${id}`);
+      window.location.href = `/orden/${id}`;
+    });
   };
 
   if (cart.length === 0) {
@@ -104,12 +97,9 @@ export const Cart = () => {
           </p>
         </div>
         <div className="goToShipping">
-          {/* <NavLink to={`/orden/${orderParam}`}> */}
           <button onClick={SendOrder} className="buy">
             Terminar mi compra
           </button>
-
-          {/* </NavLink> */}
         </div>
       </>
     );

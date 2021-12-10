@@ -40,7 +40,7 @@ export const BuyerForm = ({ getBuyer }) => {
         <label>Confirmar Correo Electronico</label>
         <FormInput setBuyer={setBuyer} field="email" buyer={buyer} />
         <button type="submit" className="buttonBlue">
-          Cargar Pedido
+          Cargar cliente
         </button>
       </form>
     </>
