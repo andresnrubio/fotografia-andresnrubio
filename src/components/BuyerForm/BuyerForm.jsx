@@ -22,7 +22,6 @@ export const BuyerForm = ({ getBuyer }) => {
       return;
     }
 
-    console.log(buyer);
     getBuyer(buyer);
   };
 

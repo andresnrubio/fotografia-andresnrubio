@@ -20,7 +20,7 @@ export const OrderResumeContainer = () => {
       }
     });
   }, [orderId]);
-  console.log(order);
+
   if (order !== {}) {
     return (
       <>
