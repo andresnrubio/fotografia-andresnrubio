@@ -3,8 +3,7 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getFirestore } from "../../firebase";
-import { getDoc, doc, connectFirestoreEmulator } from "@firebase/firestore";
-import { Preloader } from "react-materialize";
+import { getDoc, doc } from "@firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const { Id } = useParams();

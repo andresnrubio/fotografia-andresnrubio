@@ -12,13 +12,10 @@ export const CartProvider = ({ children }) => {
 
   //Funcion para agregar Q items al carrito
   const addItem = (item, quantity, size) => {
-    console.log(size);
-
     const existe = cart.filter((x) => x.id === item.id).length > 0;
 
     if (existe === false) {
       const ItemCart = { ...item, quantity, size };
-      console.log(ItemCart);
 
       setCart([...cart, ItemCart]);
     }

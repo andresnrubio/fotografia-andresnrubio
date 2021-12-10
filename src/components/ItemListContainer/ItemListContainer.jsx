@@ -25,7 +25,6 @@ export const ItemListContainer = () => {
       }
     });
   }, [categoryId]);
-  console.log(catalogo);
   return (
     <>
       <div>

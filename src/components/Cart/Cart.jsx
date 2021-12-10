@@ -24,12 +24,9 @@ export const Cart = () => {
 
   const getBuyer = (data) => {
     setBuyer(data);
-    console.log(buyer);
   };
 
   const SendOrder = () => {
-    console.log(buyer.length);
-
     const orderToSend = {
       buyer: buyer,
       items: cart,
@@ -39,10 +36,8 @@ export const Cart = () => {
 
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    console.log(orderToSend);
 
     addDoc(ordersCollection, orderToSend).then(({ id }) => {
-      console.log(`Se genero su order con el numero ${id}`);
       window.location.href = `/orden/${id}`;
     });
   };
