@@ -5,7 +5,6 @@ const totalItemsCart = (cart) => {
   let totalItems = 0;
   for (let i = 0; i < cart.length; i++) {
     totalItems = totalItems + cart[i].quantity;
-    console.log(totalItems);
   }
   return totalItems;
 };

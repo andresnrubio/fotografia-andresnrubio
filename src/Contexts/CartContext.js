@@ -11,12 +11,15 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   //Funcion para agregar Q items al carrito
-  const addItem = (item, quantity) => {
+  const addItem = (item, quantity, size) => {
+    console.log(size);
+
     const existe = cart.filter((x) => x.id === item.id).length > 0;
 
     if (existe === false) {
-      console.log(existe);
-      const ItemCart = { ...item, quantity };
+      const ItemCart = { ...item, quantity, size };
+      console.log(ItemCart);
+
       setCart([...cart, ItemCart]);
     }
   };
@@ -25,6 +28,14 @@ export const CartProvider = ({ children }) => {
   const removeItem = (itemId) => {
     setCart(cart.filter((x) => x.id !== itemId));
   };
+
+  //Funcion para modificar la cantidad de un item del carrito
+  const itemUpdate = (item, Q) => {
+    const indexItem = cart.findIndex((x) => x.id === item.id);
+    cart[indexItem].quantity = Q;
+    setCart(cart);
+  };
+
   //Funcion para vaciar el carrito
   const clear = () => {
     setCart([]);
@@ -40,7 +51,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
+      value={{ cart, addItem, removeItem, clear, isInCart, itemUpdate }}
     >
       {children}
     </CartContext.Provider>

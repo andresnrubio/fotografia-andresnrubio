@@ -8,7 +8,6 @@
     flex-direction: row;
     align-items: center;
     line-height: 3rem;
-    box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
 }
 
 .navBar h2 {
@@ -29,14 +28,12 @@
     text-decoration: none;
     min-width: 80px; */
     background-color: rgba(15, 32, 39, 0.8);
-    border-radius: 15px;
-    border: #fff 1px solid;
     height: 2rem;
     width: 6rem;
     padding: 1px;
 }
 
-.menu li>a:hover {
+.menu li :hover {
     color: #000;
     background-color: rgb(70, 116, 116);
     height: 100%;
@@ -45,7 +42,7 @@
 .menu>li {
     width: 7rem;
     list-style: none;
-    text-align: center
+    text-align: center;
 }
 
 .menu>li>ul {

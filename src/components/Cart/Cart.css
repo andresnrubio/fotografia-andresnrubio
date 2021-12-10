@@ -1,29 +1,62 @@
-.cartContainer {
-    width: 95%;
+.orderView {
     display: flex;
-    flex-direction: column;
-    min-height: 600px;
-    margin: 2.5%;
+    justify-content: space-between;
+    padding: 2rem .5rem;
+}
+
+.formContainer {
+    width: 418px;
+    text-align: initial;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    padding: 1rem;
+}
+
+.formContainer h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+
 }
 
 .itemCartList {
-    background-color: cadetblue;
-    min-height: 500px;
+    width: 418px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    height: fit-content;
+}
 
+.itemCartList h5 {
+    margin: 0 0 0 1rem;
+    text-align: initial;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.itemCartEmpty h2 {
+    font-size: 23px;
+}
+
+.itemCartEmpty p {
+    font-size: 13px;
 }
 
 .subtotalBar {
     height: 4rem;
-    background-color: bisque;
+    background-color: #fff;
+    border: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     color: #000;
     align-items: center;
+    align-self: center;
+    width: 100%;
 }
 
-.subtotalBar div button {
-    margin: 0.5rem;
+.subtotalBar button {
+    margin: 0;
+    width: 150px;
 
 }
 
@@ -32,4 +65,20 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 1rem;
+}
+
+.buy {
+    width: 250px;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #0038b1;
+    color: #fff;
+}
+
+.disabled {
+    opacity: 0.1;
+    background-color: lightgrey;
+    cursor: not-allowed;
+
 }

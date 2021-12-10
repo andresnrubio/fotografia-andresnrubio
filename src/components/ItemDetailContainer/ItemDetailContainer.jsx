@@ -1,37 +1,31 @@
 import "./ItemDetailContainer.css";
-import catalog from "../../Catalog.json";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { getFirestore } from "../../firebase";
+import { getDoc, doc, connectFirestoreEmulator } from "@firebase/firestore";
+import { Preloader } from "react-materialize";
 
 export const ItemDetailContainer = () => {
   const { Id } = useParams();
-
   const [itemDetail, setItemDetail] = useState({});
 
-  const getItemDetail = (data) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (data) {
-          resolve(data);
-        } else {
-          reject("No se encuentra el producto");
-        }
-      }, 2000);
-    });
-
   useEffect(() => {
-    getItemDetail(catalog)
-      .then((result) => {
-        const found = (result) =>
-          result.find((item) => item.id === parseInt(Id));
+    // ESTO ES PARA TRAER UN SOLO ELEMENTO DE LA COLECCION 👀
+    const db = getFirestore();
 
-        setItemDetail(found(result));
-      })
-      .catch((err) => console.log(err));
-  });
+    const itemRef = doc(db, "items", Id);
+
+    getDoc(itemRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        setItemDetail(snapshot.data());
+      }
+    });
+  }, [Id]);
 
   return (
-    <div>{itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}</div>
+    <div className="container">
+      <ItemDetail item={itemDetail} />
+    </div>
   );
 };

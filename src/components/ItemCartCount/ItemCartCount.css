@@ -1,36 +1,19 @@
-.ItemCartCount {
-    display: inline-flex;
-    width: 50px;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.countProduct {
+.countProductCart {
     margin: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    border: #d3d3d37d 1px solid;
+    border-radius: 5px;
+    width: 76px;
+    height: 1.5rem;
 }
 
-.addProductButton {
-    margin-top: 1rem;
-    width: 15rem;
-    height: 2rem;
-    max-width: 90%;
-    justify-content: center;
-}
-
-.buttonCard {
-    color: #303030;
-    background-color: darkgrey;
-}
-
-.buttonCard:hover {
-    color: #fff;
-    cursor: default;
-}
-
-.qItem {
-    font-family: "Open Sans", sans-serif, "Montserrat", sans-serif;
+.countProductCart p {
     font-size: 1rem;
+
+}
+
+.buttonCard:active {
+    font-weight: bold;
 }

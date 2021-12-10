@@ -1,6 +1,6 @@
 import "./Item.css";
 import M from "materialize-css/dist/js/materialize.js";
-import { ItemDetailModalContainer } from "../ItemDetailModalContainer/ItemDetailModalContainer";
+
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -24,15 +24,10 @@ export const Item = (props) => {
 
           <button
             data-target="modal1"
-            className="btn modal-trigger buttonSeeMore"
+            className="btn modal-trigger buttonSeeMoreModal"
           >
             <p className="material-icons iconAdd">add_shopping_cart</p>
           </button>
-          <div id="modal1" className="modal">
-            <div className="modal-content ">
-              <ItemDetailModalContainer />
-            </div>
-          </div>
         </div>
       </div>
     </>
