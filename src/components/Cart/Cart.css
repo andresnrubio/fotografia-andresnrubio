@@ -75,3 +75,10 @@
     background-color: #0038b1;
     color: #fff;
 }
+
+.disabled {
+    opacity: 0.1;
+    background-color: lightgrey;
+    cursor: not-allowed;
+
+}

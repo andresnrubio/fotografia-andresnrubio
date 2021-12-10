@@ -6,7 +6,6 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./Contexts/CartContext";
 import { OrderResumeContainer } from "./components/OrderResumeContainer/OrderResumeContainer";
 import { CartContainer } from "./components/CartContainer/CartContainer";
-import { BuyerForm } from "./components/BuyerForm/BuyerForm";
 
 function App() {
   return (
@@ -16,25 +15,25 @@ function App() {
           <header className="App-header">
             <NavBar />
           </header>
-
-          <Switch>
-            <Route exact path="/">
-              <ItemListContainer />
-            </Route>
-            <Route path="/category/:categoryId">
-              <ItemListContainer />
-            </Route>
-            <Route path="/item/:Id">
-              <ItemDetailContainer />
-            </Route>
-            <Route path="/carrito">
-              <CartContainer />
-            </Route>
-            <Route path="/order">
-              <OrderResumeContainer />
-            </Route>
-          </Switch>
-
+          <div className="App-main">
+            <Switch>
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route path="/category/:categoryId">
+                <ItemListContainer />
+              </Route>
+              <Route path="/item/:Id">
+                <ItemDetailContainer />
+              </Route>
+              <Route path="/carrito">
+                <CartContainer />
+              </Route>
+              <Route path="/orden/:orderId">
+                <OrderResumeContainer />
+              </Route>
+            </Switch>
+          </div>
           <footer className="App-footer">
             Impresiones fotograficas Andres N Rubio
           </footer>

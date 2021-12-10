@@ -9,6 +9,7 @@
 }
 
 .cartTitle {
+    width: 100%;
     display: flex;
     margin-left: 2.5%;
     flex-wrap: nowrap;

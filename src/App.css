@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background: aliceblue;
 }
 
 
@@ -28,17 +27,18 @@
   color: white;
 }
 
+
 .App-main {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  padding: 2rem;
 }
+
+
 
 .App-footer {
   flex-shrink: 0;

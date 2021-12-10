@@ -1,38 +1,54 @@
 import "./OrderResume.css";
 
-export const OrderResume = () => {
+import { ItemOrder } from "../ItemOrder/ItemOrder";
+import { Preloader } from "react-materialize";
+
+export const OrderResume = (props) => {
+  const orderDetail = props.order;
+  const buyerResume = orderDetail.buyer;
+  const orderCart = orderDetail.items;
+
   return (
-    <section>
-      <h4>Numero de Orden XXXXXXXXXXXX</h4>
+    <>
+      <h4>Numero de seguimiento {props.orderId}</h4>
       <div className="buyerDetail">
-        <p>Nombre y Apellido</p>
-        <p>email.comprador@correo.com</p>
-        <p>Numero Telefonico</p>
+        <h5>Tus datos</h5>
+        {buyerResume ? (
+          <>
+            <p>{buyerResume.name}</p>
+            <p>{buyerResume.email}</p>
+            <p>{buyerResume.phone}</p>
+            <p>{buyerResume.adress}</p>{" "}
+          </>
+        ) : (
+          ""
+        )}
       </div>
-      <div>DETALLE DE ORDEN</div>
-      <p>Seguimiento Pedido</p>
-      <div className="statusBoxContainer">
-        <div className="statusBox">
-          <p>En preparacion</p>
-          <p>01/01/1999</p>
-        </div>
-        <div className="statusBox">
-          <p>Pedido listo</p>
-          <p>01/01/1999</p>
-        </div>
-        <div className="statusBox">
-          <p>Enviado</p>
-          <p>01/01/1999</p>
-        </div>
-        <div className="statusBox">
-          <p>Entregado</p>
-          <p>01/01/1999</p>
-        </div>
-        <div className="statusBox">
-          <p>Orden Completa</p>
-          <p>01/01/1999</p>
-        </div>
+      <div>
+        <h5>Detalle de tu pedido</h5>
+        {orderCart ? (
+          orderCart.map((data) => (
+            <ItemOrder
+              key={data.id}
+              quantity={data.quantity}
+              size={data.size}
+              title={data.title}
+              price={data.price}
+              img1={data.img1}
+              img2={data.img2}
+              img3={data.img3}
+            />
+          ))
+        ) : (
+          <Preloader
+            active
+            color="blue"
+            flashing={false}
+            size="big"
+            className="centerPreloader"
+          />
+        )}
       </div>
-    </section>
+    </>
   );
 };

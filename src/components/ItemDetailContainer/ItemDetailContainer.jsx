@@ -3,7 +3,8 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getFirestore } from "../../firebase";
-import { getDoc, doc } from "@firebase/firestore";
+import { getDoc, doc, connectFirestoreEmulator } from "@firebase/firestore";
+import { Preloader } from "react-materialize";
 
 export const ItemDetailContainer = () => {
   const { Id } = useParams();
@@ -24,7 +25,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <div className="container">
-      {itemDetail ? <ItemDetail item={itemDetail} /> : "Cargando..."}
+      <ItemDetail item={itemDetail} />
     </div>
   );
 };

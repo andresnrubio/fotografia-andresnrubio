@@ -24,17 +24,18 @@ export const Cart = () => {
 
   const getBuyer = (data) => {
     setBuyer(data);
+    console.log(buyer);
   };
 
   const [order, setOrder] = useState({});
+  const [orderParam, setOrderParam] = useState("");
 
-  const SendOrder = () => {
+  const SendOrder = async () => {
     console.log(buyer);
-    console.log({ cart });
-
-    setOrder({
-      buyer: { buyer },
-      items: [{ cart }],
+    console.log(order);
+    await setOrder({
+      buyer: buyer,
+      items: cart,
       total: total(cart),
       date: orderDate,
     });
@@ -42,12 +43,14 @@ export const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
     console.log(order);
+
     if (order !== {}) {
       addDoc(ordersCollection, order).then(({ id }) => {
         console.log(`Se genero su order con el numero ${id}`);
+        setOrderParam(id);
       });
-      console.log(order);
     }
+
     // clear();
   };
 
@@ -101,11 +104,12 @@ export const Cart = () => {
           </p>
         </div>
         <div className="goToShipping">
-          <NavLink to={{ pathname: "/order", state: order }}>
-            <button onClick={SendOrder} className="buy">
-              Terminar mi compra
-            </button>
-          </NavLink>
+          {/* <NavLink to={`/orden/${orderParam}`}> */}
+          <button onClick={SendOrder} className="buy">
+            Terminar mi compra
+          </button>
+
+          {/* </NavLink> */}
         </div>
       </>
     );

@@ -17,11 +17,9 @@
     height: 350px;
 }
 
-/* .buttonSeeMore {
-    width: 75%;
-    align-self: center;
-
-} */
+.buttonSeeMoreModal {
+    visibility: hidden;
+}
 
 .cardProduct h5 {
     text-align: left;

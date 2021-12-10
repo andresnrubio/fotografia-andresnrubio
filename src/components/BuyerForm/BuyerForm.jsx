@@ -10,10 +10,6 @@ export const BuyerForm = ({ getBuyer }) => {
     adress: "",
   });
 
-  //   useEffect(() => {
-  //     console.log(buyer);
-  //   }, [buyer]);
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -22,7 +18,7 @@ export const BuyerForm = ({ getBuyer }) => {
       buyer.name.length < 5 ||
       buyer.phone.length < 8
     ) {
-      alert("Completa todos los campos por favor");
+      alert("Verifica los campos ingresados");
       return;
     }
 
